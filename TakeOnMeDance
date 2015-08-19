@@ -1,0 +1,50 @@
+from Myro import *
+#init('/dev/tty.Fluke2-0C56-Fluke2')
+#Take on me by A_HA
+
+def intro(): #Turns back and forth, then moves backwards and forwards.
+    for i in range(2):
+        turnBy(90,"deg")
+        turnBy(-90,"deg")
+        turnBy(270,"deg")
+        turnBy(-270,"deg")
+    for i in range(4):
+        backward(2,2)
+        forward(2,2)
+
+def star(turns):  #Turns around in different directions
+    for i in range(turns):
+        forward(1,.55)
+        turnLeft(.85,1)
+    forward(1,.25)
+
+def circle(): #goes and circle
+    for i in range(2):
+        move(.55, 1)
+        wait(3)
+        move(.55,-1)
+        wait(3)
+        stop()
+
+def zigzag():
+    for i in range(15):
+        move(.55,1)
+        move(-.55,1)
+    stop()
+    
+def speed():
+    for i in range(10)
+        turnRight(2,1)
+    
+def main(): 
+    intro()
+    star(6)
+    circle()
+    zigzag()
+    speed()
+    star(6)
+    circle()
+    intro()
+   
+   
+main()
